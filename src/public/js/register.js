@@ -50,7 +50,7 @@ function handleClickRegisterBtn() {
                 method: "POST",
                 data: {fullname: fullname, email: email, password: password, passwordConfirmation: passwordConfirmation},
                 success: function(data) {
-                    alert("Create a new account succeeds!");
+                    alert("회원가입을 성공적으로 하였습니다.!");
                     window.location.href = "/login";
                 },
                 error: function(err) {

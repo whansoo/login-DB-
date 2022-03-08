@@ -13,12 +13,12 @@ let createNewUser = async (req, res) => {
      };
      //create a new user
      await registerService.createNewUser(data);
-     return res.staus(200).json({
+     return res.status(200).json({
          message: "a user creat succeeds"
      })
 
  } catch (e) {
-     return res.staus(500).json(e);
+     return res.status(500).json(e);
  }
 
 };
