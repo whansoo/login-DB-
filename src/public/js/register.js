@@ -37,7 +37,7 @@ function handleClickRegisterBtn() {
         let email = $("#email").val();
         let password = $("#password").val();
         let passwordConfirmation = $("#passwordConfirmation").val();
-        let fullName = $("#fullName").val();
+        let fullname = $("#fullname").val();
 
         //validate input
         let check = validateInput(email, password, passwordConfirmation);
@@ -48,7 +48,7 @@ function handleClickRegisterBtn() {
             $.ajax({
                 url: `${window.location.origin}/register-new-user`,
                 method: "POST",
-                data: {fullName: fullName, email: email, password: password, passwordConfirmation: passwordConfirmation},
+                data: {fullname: fullname, email: email, password: password, passwordConfirmation: passwordConfirmation},
                 success: function(data) {
                     alert("Create a new account succeeds!");
                     window.location.href = "/login";
