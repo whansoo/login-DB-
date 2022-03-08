@@ -9,8 +9,9 @@ let initWebRoutes = (app) => {
     });
 
     router.get("/register", registerController.getRegisterPage );
-
-
+    router.post("/register-new-user", registerController.createNewUser );
+   
+    
     router.get("/login", loginController.getLoginPage );
     return app.use("/", router);
 };
